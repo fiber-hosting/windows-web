@@ -17,4 +17,5 @@ Maybe I'll add more tabs but who knows.
 I've tested it on Chrome, Edge (custom scrollbar didn't work), Opera and Firefox.
 
 **If you have some advices about my coding, write it.. somewhere (I'm not familiar with GitHub)**
-*This is my first thing on GitHub, I should use probably a CodePen, but it wasn't able to transform my code into normal-looking window.*
+
+*This is my first project on GitHub, I should use probably a CodePen, but it wasn't able to transform my code into a normal-looking window.*
