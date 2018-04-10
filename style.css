@@ -1,0 +1,222 @@
+/*Windows size: 978x608*/
+@font-face {
+  font-family: 'SegoeUI';
+  src: url("fonts/segoeui.ttf");
+}
+
+body {
+  margin: 0;
+  background: url("bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: SegoeUI;
+  color: #eee;
+  overflow: hidden;
+}
+
+#window {
+  width: 978px; height: 608px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255,0,0,1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255,0,0,1);
+  box-shadow: 0px 0px 3px 0px rgba(255,0,0,1);
+  position: absolute;
+}
+
+#lside {
+  background: url("bg_blur.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 320px;
+  float: left;
+}
+
+#rSide {
+  width: 658px;
+  height: 100%;
+  background: black;
+  float: left;
+}
+
+.titlebar {
+  padding: 0px 0px 0px 0px;
+  font-size: 14px;
+  height: 20px;
+}
+
+.titlebar img {
+  width: 20px; height: 20px;
+  vertical-align: middle;
+  padding: 8px 15px 8px 15px;
+}
+
+#static_menu {
+    padding: 30px 20px 0px 0px;
+}
+
+#static_menu a {
+  text-decoration: none;
+  color: #eee;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 12px 12px 12px 20px;
+}
+
+#static_menu > a > img {
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+}
+
+span.menu {
+  margin-left: 10px;
+}
+
+#search_box {
+  margin: 20px 0 0 0;
+  width: 95%;
+  height: auto;
+  background: rgba(21,14,16,0.7) url("icons/search.png");
+  background-size: 5%;
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+  border: 2px solid grey;
+  color: grey;
+  font-family: SegoeUI;
+  font-size: 15px;
+  padding: 3px 3px 3px 10px;
+  margin-left: 20px;
+}
+
+#search_box:focus {
+  background: rgba(255,255,255,0.9) url("icons/search.png");
+  background-size: 5%;
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+  border: 2px solid rgb(177,49,49);
+  outline: 0;
+}
+
+#static_menu h2 {
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+#scrollable_menu {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 400px;
+}
+
+#scrollable_menu::-webkit-scrollbar {
+  background: transparent;
+  width: 2px;
+}
+
+#scrollable_menu::-webkit-scrollbar-thumb {
+  background: rgba(200,200,200,0.5);
+  border-radius: 1px;
+}
+
+#scrollable_menu a {
+  text-decoration: none;
+  color: #eee;
+  width: 100%;
+  display: block;
+  padding: 14px 14px 14px 20px;
+}
+
+#scrollable_menu img {
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+}
+
+#lSide a:hover {
+  background: rgba(255,255,255,0.3);
+  cursor: default;
+}
+
+.titlebar img:hover {
+  background: #a31919;
+}
+
+img.close {
+  padding: 8px 15px 8px 15px;
+}
+
+img.close:hover {
+  background: #e81123;
+}
+
+img.two_buttons{
+  padding-bottom: 9px;
+  padding-top: 10px;
+}
+
+img.two_buttons:hover {
+  background: #d13d3d;
+}
+
+#rSide h2 {
+  padding-left: 20px;
+  font-weight:lighter;
+  font-size: 27px;
+}
+
+#rSide h3 {
+  font-weight:lighter;
+}
+
+.option {
+  padding-left: 30px;
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+.option p {
+  font-size: 15px;
+  text-align: justify;
+}
+
+.option a {
+  color: #d13d3d;
+  text-decoration: none;
+}
+
+.option a:hover {
+  color: #888;
+}
+
+.option .button {
+  background: #333333;
+  padding: 5px 10px 5px 10px;
+  width: 79px;
+  border: 2px solid #333;
+}
+
+.option .button:hover {
+  border: 2px solid #999;
+  cursor: default;
+}
+
+#rSide .scroll {
+    overflow-y: scroll;
+    height: 507px;
+    margin-right: 3px;
+}
+
+#rSide .scroll::-webkit-scrollbar {
+  background: transparent;
+  width: 3px;
+}
+
+#rSide .scroll::-webkit-scrollbar-thumb {
+  background: rgba(200,200,200,0.5);
+  border-radius: 3px;
+}

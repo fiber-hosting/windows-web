@@ -1,0 +1,128 @@
+<html>
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <div id="window">
+    <div id="lSide">
+      <div class="titlebar">
+        <img style="width:20px;height:17px;" src="icons/left-arrow.svg"/>
+        <span style="margin-left:15px">Settings</span>
+      </div>
+      <div id="static_menu">
+        <a href="#"><img src="icons/home.svg"> <span class="menu">Home</span></a>
+        <input type="text" id="search_box" placeholder="Find a setting">
+        <h2>Update & Security</h2>
+      </div>
+      <div id="scrollable_menu">
+        <a href="#"><img src="icons/reload.svg"> <span class="menu">Windows Update</span></a>
+        <a href="#"><img src="icons/shield.svg"> <span class="menu">Windows Security</span></a>
+        <a href="#"><img src="icons/backup.svg"> <span class="menu">Backup</span></a>
+        <a href="#"><img src="icons/wrench.svg"> <span class="menu">Troubleshoot</span></a>
+        <a href="#" style="padding-left:0px;background:transparent"><img src="icons/recovery.svg" style="border-left: 3px solid #cf2c2c;padding-left:14px"> <span class="menu">Recovery</span></a>
+        <a href="#"><img src="icons/tick.svg"> <span class="menu">Activation</spa></a>
+        <a href="#"><img src="icons/location.svg"> <span class="menu">Find my device</span></a>
+        <a href="#"><img src="icons/dev.svg"> <span class="menu">For developers</span></a>
+        <a href="#"><img src="icons/insider.svg"> <span class="menu">Windows Insider Programme</span></a>
+        <br>
+      </div>
+    </div>
+    <div id="rSide">
+      <div class="titlebar">
+        <img style="float:right;width:15px;height:15px" class="close" src="icons/close.png"/>
+        <img style="float:right;width:12px;height:12px" class="two_buttons" src="icons/square.png"/>
+        <img style="float:right;width:12px;height:12px;" class="two_buttons" src="icons/underscore.png"/>
+      </div>
+
+      <h2>Recovery</h2>
+      <div class="scroll">
+        <div class="option">
+          <h3>Reset this PC</h3>
+          <p>If your PC isn't running well, reseting it might help. This lets you choose whether to keep your presonal
+            files or remove them, and then reinstalls Windows.</p>
+            <div class="button">
+              Get started
+            </div>
+          </div>
+          <div class="option">
+            <h3>Go back to the previous version of Windows 10</h3>
+            <p>If this version isn't working for you, try going back to an earlier one.</p>
+            <div class="button">
+              Get started
+            </div>
+          </div>
+          <div class="option">
+            <h3>Advanced start-up</h3>
+            <p>Start up from a device or disc (such as a USB drive or DVD), change your PC's firmware settings,
+              change Windows start-up settings or restore Windows from a system image. This will restart your PC.</p>
+              <div class="button">
+                Get started
+              </div>
+            </div>
+            <div class="option">
+              <h3>More recovery options</h3>
+              <p><a href="#">Learn how to start afresh with a clean installation of Windows</a></p>
+            </div>
+            <div class="option">
+              <h3>Back up your files</h3>
+              <p>If you're having problems with your PC, there are ways to back up and restore your
+                files if the original files are lost, damaged, or deleted.<br>
+                <a href="#" style="line-height:30px;">Check backup settings</a></p>
+            </div>
+            <div class="option">
+              <h3>Do you have a question?</h3>
+              <p><a href="#">Get help</a></p>
+            </div>
+            <div class="option">
+              <h3>Make Windows better</h3>
+              <p><a href="#">Give us feedback</a></p>
+            </div>
+        </div>
+      </div>
+
+  <script>
+    //Make the DIV element draggagle:
+    dragElement(document.getElementById(("window")));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+  </script>
+</body>
+</html>
